@@ -5,12 +5,25 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Service
 public class PostService {
+    private final List<Post> posts;
 
+    public PostService() {
+        posts = new ArrayList<>();
+        posts.add(new Post("Hello. I am Maxim."));
+        posts.add(new Post("Who am I?"));
+        posts.add(new Post("What is your name?"));
+
+    }
     public List<Post> listAllPosts() {
-        return Arrays.asList(new Post("Hello. I am Maxim."), new Post("Who am I?"), new Post("What is your name?"));
+        return posts;
+    }
+
+    public void create(String text) {
+        posts.add(new Post(text));
     }
 }

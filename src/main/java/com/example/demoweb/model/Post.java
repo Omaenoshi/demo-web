@@ -11,7 +11,7 @@ public class Post {
 
     public Post(String text) {
         this.text = text;
-        creationDate = new Date();
+        this.creationDate = new Date();
     }
 
     public Date getCreationDate() {

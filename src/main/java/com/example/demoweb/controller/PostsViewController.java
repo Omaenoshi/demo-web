@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class PostsViewController {
-
     @Autowired
     PostService postsService;
 
