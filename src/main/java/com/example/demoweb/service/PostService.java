@@ -14,9 +14,9 @@ public class PostService {
 
     public PostService() {
         posts = new ArrayList<>();
-        posts.add(new Post("Hello. I am Maxim."));
-        posts.add(new Post("Who am I?"));
-        posts.add(new Post("What is your name?"));
+        posts.add(new Post(0, "Hello. I am Maxim."));
+        posts.add(new Post(1, "Who am I?"));
+        posts.add(new Post(2, "What is your name?"));
 
     }
     public List<Post> listAllPosts() {
@@ -24,6 +24,6 @@ public class PostService {
     }
 
     public void create(String text) {
-        posts.add(new Post(text));
+        posts.add(new Post(posts.size(), text));
     }
 }
